@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Xadre javaScript 1.0</title>
+</head>
+<body>
+    <div class="promover-peao" id="hiddenn">
+        <div class="container-promover">
+            <h1>Para qual peça deseja promover seu peão?</h1>
+            <div class="all-promos">
+                <div class="contem-promo" onclick="promoverPeao('torre')">
+                    <span>&#9820</span>
+                </div>
+                <div class="contem-promo" onclick="promoverPeao('cavalo')">
+                    <span>&#9822</span>
+                </div>
+                <div class="contem-promo" onclick="promoverPeao('bispo')">
+                    <span>&#9821</span>
+                </div>
+                <div class="contem-promo" onclick="promoverPeao('rainha')">
+                    <span>&#9819</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class="linhas l1">
+            <div class="" id="t11" onclick="seleciona(1,1);"></div>
+            <div class="" id="t12" onclick="seleciona(1,2);"></div>
+            <div class="" id="t13" onclick="seleciona(1,3);"></div>
+            <div class="" id="t14" onclick="seleciona(1,4);"></div>
+            <div class="" id="t15" onclick="seleciona(1,5);"></div>
+            <div class="" id="t16" onclick="seleciona(1,6);"></div>
+            <div class="" id="t17" onclick="seleciona(1,7);"></div>
+            <div class="" id="t18" onclick="seleciona(1,8);"></div>
+        </div>
+        <div class="linhas l2">
+            <div class="" id="t21" onclick="seleciona(2,1);"></div>
+            <div class="" id="t22" onclick="seleciona(2,2);"></div>
+            <div class="" id="t23" onclick="seleciona(2,3);"></div>
+            <div class="" id="t24" onclick="seleciona(2,4);"></div>
+            <div class="" id="t25" onclick="seleciona(2,5);"></div>
+            <div class="" id="t26" onclick="seleciona(2,6);"></div>
+            <div class="" id="t27" onclick="seleciona(2,7);"></div>
+            <div class="" id="t28" onclick="seleciona(2,8);"></div>
+        </div>
+        <div class="linhas l1">
+            <div class="vazio" id="t31" onclick="seleciona(3,1);"></div>
+            <div class="vazio" id="t32" onclick="seleciona(3,2);"></div>
+            <div class="vazio" id="t33" onclick="seleciona(3,3);"></div>
+            <div class="vazio" id="t34" onclick="seleciona(3,4);"></div>
+            <div class="vazio" id="t35" onclick="seleciona(3,5);"></div>
+            <div class="vazio" id="t36" onclick="seleciona(3,6);"></div>
+            <div class="vazio" id="t37" onclick="seleciona(3,7);"></div>
+            <div class="vazio" id="t38" onclick="seleciona(3,8);"></div>
+        </div>
+        <div class="linhas l2">
+            <div class="vazio" id="t41" onclick="seleciona(4,1);"></div>
+            <div class="vazio" id="t42" onclick="seleciona(4,2);"></div>
+            <div class="vazio" id="t43" onclick="seleciona(4,3);"></div>
+            <div class="vazio" id="t44" onclick="seleciona(4,4);"></div>
+            <div class="vazio" id="t45" onclick="seleciona(4,5);"></div>
+            <div class="vazio" id="t46" onclick="seleciona(4,6);"></div>
+            <div class="vazio" id="t47" onclick="seleciona(4,7);"></div>
+            <div class="vazio" id="t48" onclick="seleciona(4,8);"></div>
+        </div>
+        <div class="linhas l1">
+            <div class="vazio" id="t51" onclick="seleciona(5,1);"></div>
+            <div class="vazio" id="t52" onclick="seleciona(5,2);"></div>
+            <div class="vazio" id="t53" onclick="seleciona(5,3);"></div>
+            <div class="vazio" id="t54" onclick="seleciona(5,4);"></div>
+            <div class="vazio" id="t55" onclick="seleciona(5,5);"></div>
+            <div class="vazio" id="t56" onclick="seleciona(5,6);"></div>
+            <div class="vazio" id="t57" onclick="seleciona(5,7);"></div>
+            <div class="vazio" id="t58" onclick="seleciona(5,8);"></div>
+        </div>
+        <div class="linhas l2">
+            <div class="vazio" id="t61" onclick="seleciona(6,1);"></div>
+            <div class="vazio" id="t62" onclick="seleciona(6,2);"></div>
+            <div class="vazio" id="t63" onclick="seleciona(6,3);"></div>
+            <div class="vazio" id="t64" onclick="seleciona(6,4);"></div>
+            <div class="vazio" id="t65" onclick="seleciona(6,5);"></div>
+            <div class="vazio" id="t66" onclick="seleciona(6,6);"></div>
+            <div class="vazio" id="t67" onclick="seleciona(6,7);"></div>
+            <div class="vazio" id="t68" onclick="seleciona(6,8);"></div>
+        </div>
+        <div class="linhas l1">
+            <div class="" onclick="seleciona(7,1);" id="t71"></div>
+            <div class="" onclick="seleciona(7,2);" id="t72"></div>
+            <div class="" onclick="seleciona(7,3);" id="t73"></div>
+            <div class="" onclick="seleciona(7,4);" id="t74"></div>
+            <div class="" onclick="seleciona(7,5);" id="t75"></div>
+            <div class="" onclick="seleciona(7,6);" id="t76"></div>
+            <div class="" onclick="seleciona(7,7);" id="t77"></div>
+            <div class="" onclick="seleciona(7,8);" id="t78"></div>
+        </div>
+        <div class="linhas l2">
+            <div class="" onclick="seleciona(8,1);" id="t81"></div>
+            <div class="" onclick="seleciona(8,2);" id="t82"></div>
+            <div class="" onclick="seleciona(8,3);" id="t83"></div>
+            <div class="" onclick="seleciona(8,4);" id="t84"></div>
+            <div class="" onclick="seleciona(8,5);" id="t85"></div>
+            <div class="" onclick="seleciona(8,6);" id="t86"></div>
+            <div class="" onclick="seleciona(8,7);" id="t87"></div>
+            <div class="" onclick="seleciona(8,8);" id="t88"></div>
+        </div>
+    </main>
+    <script src="./javaScript.js"></script>
+</body>
+</html>

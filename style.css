@@ -1,0 +1,165 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    position: relative;
+    overflow: hidden;
+}
+main{
+    width: 40%;
+    position: fixed;
+    max-width: 37.5em;
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+    min-width: 375px;
+}
+.linhas{
+    height: calc(100% / 8);
+    width: 100%;
+    display: flex;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    background-color: #ccc;
+}
+.linhas div{
+    width: calc(100% / 8);
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+}
+.l2 div:nth-child(odd){
+    background-color: rgb(60, 183, 50);
+}
+.l2 div:nth-child(even){
+    background-color: rgb(214, 243, 188);
+}
+.l1 div:nth-child(even){
+    background-color: rgb(60, 183, 50);
+}
+.l1 div:nth-child(odd){
+    background-color: rgb(214, 243, 188);
+}
+
+
+/*  style peças */
+
+.preto{
+    color: black;
+}
+.branco{
+    color: white;
+    text-shadow: 1px 1px rgba(0,0,0,0.3, -1px -1px rgba(0,0,0,0.3));
+}
+.marcado{
+    background-color: rgba(255,0,0,0.5) !important;
+    border: 1px solid white;
+    z-index: 2000;
+}
+
+/* PROMOVER PEAO */
+.promover-peao{
+    display: none;
+    width: 100%;
+    z-index: 9000;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+}
+.promoverShow{
+    display: fixed !important;
+    width: 100%;
+    z-index: 9000;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+}
+.promover-peao h1{
+    display: block;
+    margin-bottom: 2.5em;
+    font-family: 'Noto Sans Mono', monospace;
+    font-weight: 700;
+    text-shadow: 1px 1px white;
+}
+.promoverShow .container-promover{
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-55%);
+    background-color: wheat;
+    padding: 1em 0.5em;
+    border-radius: 10px;
+    border: 2px solid black;
+    animation: promover-peao 3s normal;
+    opacity: 0;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+    max-width: 100%;
+}
+.contem-promo{
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 10px;
+    gap: 25px;
+    border: 2px solid black;
+    cursor: pointer;
+    font-size: 3.6em;
+    transition: 0.4s;
+}
+.contem-promo:hover{
+    background-color: lightskyblue;
+    transition: 0.4s;
+    border: 2px solid brown;
+}
+.all-promos{
+    display: flex;
+    gap: 2em;
+}
+@keyframes promover-peao {
+    from{
+        opacity: 0;
+        transform: translate(-10%,-55%);
+    }
+    to{
+        opacity: 1;
+        transform: translate(-50%,-55%);
+    }
+}
+@media screen and (max-width: 450px) {
+    .promoverShow .container-promover{
+        width: 100%;
+    }.contem-promo{
+        width: 55px;
+        height: 55px;
+        background-color: white;
+        border-radius: 10px;
+        gap: 25px;
+        border: 2px solid black;
+        cursor: pointer;
+        font-size: 3.6em;
+        transition: 0.4s;
+    }
+    span{
+        font-size: 0.9em;
+        position: relative;
+        top: -15%;
+        left: 0%;
+    }
+}
